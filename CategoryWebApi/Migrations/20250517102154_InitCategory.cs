@@ -5,7 +5,7 @@
 namespace CategoryWebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class InitCategory : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

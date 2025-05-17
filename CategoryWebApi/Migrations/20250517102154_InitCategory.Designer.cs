@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CategoryWebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250515201519_Init")]
-    partial class Init
+    [Migration("20250517102154_InitCategory")]
+    partial class InitCategory
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
