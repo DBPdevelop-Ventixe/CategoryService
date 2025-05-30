@@ -2,10 +2,12 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace CategoryWebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class InitCategory : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,6 +23,23 @@ namespace CategoryWebApi.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categories", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "Id", "Description" },
+                values: new object[,]
+                {
+                    { 1, "Wellness & Relax" },
+                    { 2, "Workout & Gym" },
+                    { 3, "Festival & Fun" },
+                    { 4, "Food & Drinks" },
+                    { 5, "Travel & Adventure" },
+                    { 6, "Sports & Outdoors" },
+                    { 7, "Music & Concerts" },
+                    { 8, "Arts & Crafts" },
+                    { 9, "Education & Learning" },
+                    { 10, "Technology & Gadgets" }
                 });
         }
 
