@@ -28,7 +28,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddGrpc();
 
 builder.Services.AddDbContext<DataContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CategoryConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlDbConnection")));
 
 var app = builder.Build();
 
